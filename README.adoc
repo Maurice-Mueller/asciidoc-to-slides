@@ -4,6 +4,7 @@ This projects aims to provide an easy way to create slides from AsciiDoc -
 both for online use (e.g. revealJS) and offline use (pdf).
 
 It uses several projects:
+
 * https://github.com/hakimel/reveal.js/
 * https://github.com/astefanutti/decktape
 * based on the revealJS example from: https://github.com/asciidoctor/asciidoctor-gradle-examples
