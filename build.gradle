@@ -131,6 +131,8 @@ task renderRevealJS(type: AsciidoctorTask) {
 
 task renderSlidePDF(type: AsciidoctorTask) {
   doLast {
+    def pdfdir = new File(project.buildDir, "asciidoc/pdf")
+    pdfdir.mkdirs()
     exec {
       def projectDirString = projectDir.toString()
       workingDir decktapeDir
@@ -148,3 +150,5 @@ renderSlides.dependsOn jrubyPrepare
 renderSlides.dependsOn download
 renderSlides.dependsOn renderRevealJS
 renderSlides.dependsOn renderSlidePDF
+
+defaultTasks 'renderSlides'
